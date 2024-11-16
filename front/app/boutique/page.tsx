@@ -1,16 +1,17 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
+import { useState, useEffect, Fragment } from 'react';
 import ProductCard from '../components/ProductCard';
 import { fetchProducts } from '../services/api';
 import { Product } from '../types';
+import { useCart } from "../context/CartContext";
 
 const Boutique = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('Toutes');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const getProducts = async () => {
@@ -42,8 +43,7 @@ const Boutique = () => {
   const categories = Array.from(new Set(products.map((product) => product.category)));
 
   return (
-    <div>
-      <Navbar />
+    <Fragment>
       <div className="container mx-auto mt-8">
         <h1 className="text-3xl font-bold mb-6">Boutique</h1>
 
@@ -79,11 +79,11 @@ const Boutique = () => {
 
         <div className="grid grid-cols-3 gap-4">
           {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} onAddToCart={() => addToCart(product)} />
           ))}
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 

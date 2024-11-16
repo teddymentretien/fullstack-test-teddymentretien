@@ -5,7 +5,6 @@ import { fetchProducts, createProduct, updateProduct, deleteProduct } from '../s
 import { Product } from '../types';
 import ProductForm from '../components/ProductForm';
 import ProductCard from '../components/ProductCard';
-import Navbar from '../components/Navbar';
 
 const AdminPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -39,7 +38,6 @@ const AdminPage = () => {
 
   return (
     <Fragment>
-      <Navbar />
       <div className="container mx-auto mt-8">
         <h1 className="text-3xl font-bold mb-6">Gestion des Produits</h1>
 
