@@ -26,7 +26,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialProduct, onSubmit, sub
         placeholder="Nom"
         value={product.name}
         onChange={handleChange}
-        className="border p-2 mr-2"
+        className="border p-2 mr-2 text-black"
       />
       <input
         type="text"
@@ -34,7 +34,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialProduct, onSubmit, sub
         placeholder="Description"
         value={product.description}
         onChange={handleChange}
-        className="border p-2 mr-2"
+        className="border p-2 mr-2 text-black"
       />
       <input
         type="number"
@@ -42,7 +42,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialProduct, onSubmit, sub
         placeholder="Prix"
         value={product.price}
         onChange={handleChange}
-        className="border p-2 mr-2"
+        className="border p-2 mr-2 text-black"
       />
       <input
         type="text"
@@ -50,7 +50,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialProduct, onSubmit, sub
         placeholder="Catégorie"
         value={product.category}
         onChange={handleChange}
-        className="border p-2 mr-2"
+        className="border p-2 mr-2 text-black"
       />
       <input
         type="number"
@@ -58,7 +58,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialProduct, onSubmit, sub
         placeholder="Stock"
         value={product.stock}
         onChange={handleChange}
-        className="border p-2 mr-2"
+        className="border p-2 mr-2 text-black"
       />
       <button
         className="bg-green-500 text-white px-4 py-2 rounded"

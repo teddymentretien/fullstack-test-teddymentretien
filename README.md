@@ -1,5 +1,12 @@
 # Sujet : Création d’une boutique
 
+## Démo
+![Alt text](front/public/result1.png)
+![Alt text](front/public/result2.png)
+![Alt text](front/public/result3.png)
+![Alt text](front/public/result4.png)
+
+
 ## Front (react / typescript) :
 * un espace admin (page /admin)
 * création, liste, mise à jour et suppression de produit
